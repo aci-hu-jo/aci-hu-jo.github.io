@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light only">
     <title>ACI - The Hashemite University</title>
     
     <!-- وسوم المعاينة لتظهر بشكل صحيح في واتساب ومنصات التواصل -->
     <meta property="og:title" content="ACI - The Hashemite University">
-    <meta property="og:description" content="Official Contacts, Team & Board - ACI Student Chapter at The Hashemite University">
+    <meta property="og:description" content="Official Contacts & Social Media Links - ACI Student Chapter at The Hashemite University">
     <meta property="og:type" content="website">
 
     <!-- استيراد خط كلاسيكي مشابه لتصميم كانفا -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<meta name="color-scheme" content="light only">
     <style>
         :root {
             --bg-color: #ecebe9;
@@ -46,16 +45,16 @@
             max-width: 440px;
             min-height: 100vh;
             background-color: var(--bg-color);
-            background-image: url('back.png');
-            background-size: cover;
-            background-position: center;
+          background-image: url('back.png');
+background-size: cover;
+background-position: center;
             padding: 55px 28px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            overflow-x: hidden;
+            overflow: hidden;
         }
 
         /* الزخارف الهندسية في الأعلى والأسفل */
@@ -63,4 +62,242 @@
             position: absolute;
             left: 14px;
             right: 14px;
-            height
+            height: 140px;
+            pointer-events: none;
+        }
+
+        .ornament-top {
+            top: 14px;
+        }
+
+        .ornament-bottom {
+            bottom: 14px;
+            transform: scaleY(-1);
+        }
+
+        .frame-line-h {
+            position: absolute;
+            top: 14px;
+            left: 38px;
+            right: 38px;
+            height: 1px;
+            background-color: #6e6e6e;
+        }
+
+        .frame-line-v-left {
+            position: absolute;
+            top: 38px;
+            left: 14px;
+            width: 1px;
+            height: 95px;
+            background-color: #6e6e6e;
+        }
+
+        .frame-line-v-right {
+            position: absolute;
+            top: 38px;
+            right: 14px;
+            width: 1px;
+            height: 95px;
+            background-color: #6e6e6e;
+        }
+
+        .center-diamond {
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 36px;
+            height: 36px;
+            background-color: var(--bg-color);
+            border: 1.5px solid var(--accent-coral);
+            box-shadow: 0 0 12px var(--accent-coral-glow), inset 0 0 8px var(--accent-coral-glow);
+        }
+
+        .corner-box {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border: 1px solid var(--accent-coral);
+        }
+        .corner-top-left { top: 6px; left: 6px; }
+        .corner-top-right { top: 6px; right: 6px; }
+
+        .small-square {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #4a4a4a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .small-square::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border: 1px solid var(--accent-coral);
+            border-radius: 50%;
+        }
+
+        .sq-tl-1 { top: 8px; left: 42px; }
+        .sq-tl-2 { top: 22px; left: 22px; }
+        .sq-tl-3 { top: 42px; left: 8px; }
+
+        .sq-tr-1 { top: 8px; right: 42px; }
+        .sq-tr-2 { top: 22px; right: 22px; }
+        .sq-tr-3 { top: 42px; right: 8px; }
+
+        .content-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto 0;
+        }
+
+        .logo-section {
+            text-align: center;
+            margin-bottom: 24px;
+            margin-top: 15px;
+        }
+
+        .logo-section img {
+            max-width: 210px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 22px;
+            width: 100%;
+        }
+
+        .title-section h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-color);
+            margin-bottom: 6px;
+        }
+
+        .title-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        .title-divider::before,
+        .title-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #7a7a7a;
+        }
+
+        .title-divider span {
+            font-size: 0.75rem;
+            color: #555;
+            letter-spacing: 2px;
+        }
+
+        .links-list {
+            width: 100%;
+            max-width: 310px;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            margin-bottom: 15px;
+        }
+
+        .link-btn {
+            display: block;
+            width: 100%;
+            padding: 11px 16px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            border: 1.2px solid var(--border-dark);
+            background-color: rgba(255, 255, 255, 0.15);
+            transition: all 0.25s ease;
+        }
+
+        .link-btn:hover, .link-btn:active {
+            background-color: var(--text-color);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+<body>
+
+    <main class="page-container">
+        <!-- الإطار العلوي -->
+        <div class="ornament-frame ornament-top">
+            <div class="frame-line-h"></div>
+            <div class="frame-line-v-left"></div>
+            <div class="frame-line-v-right"></div>
+            <div class="center-diamond"></div>
+            <div class="corner-box corner-top-left"></div>
+            <div class="corner-box corner-top-right"></div>
+            <div class="small-square sq-tl-1"></div>
+            <div class="small-square sq-tl-2"></div>
+            <div class="small-square sq-tl-3"></div>
+            <div class="small-square sq-tr-1"></div>
+            <div class="small-square sq-tr-2"></div>
+            <div class="small-square sq-tr-3"></div>
+        </div>
+
+        <!-- المحتوى -->
+        <div class="content-wrapper">
+            <div class="logo-section">
+                <!-- تأكد أن اسم صورة الشعار في نفس المجلد هو Hashemite_University_ACI_Logo_HQ.jpg -->
+                <img src="Hashemite_University_ACI_Logo_HQ.png" alt="ACI - The Hashemite University Student Chapter">
+            </div>
+
+            <div class="title-section">
+                <h1>OUR CONTACTS</h1>
+                <div class="title-divider">
+                    <span>❖</span>
+                </div>
+            </div>
+
+            <nav class="links-list">
+                <a href="https://www.facebook.com/profile.php?id=100090298333424" target="_blank" rel="noopener noreferrer" class="link-btn">Facebook</a>
+                <a href="https://www.instagram.com/aci.hu.jo/" target="_blank" rel="noopener noreferrer" class="link-btn">Instagram</a>
+                <a href="https://www.linkedin.com/company/aci-hashemite-university/" target="_blank" rel="noopener noreferrer" class="link-btn">LinkedIn</a>
+                <a href="https://www.youtube.com/@ACIStudentChapterHU" target="_blank" rel="noopener noreferrer" class="link-btn">YouTube</a>
+                <a href="mailto:aci.hu.jo@gmail.com" class="link-btn">Email</a>
+                <a href="https://www.concrete.org/middleeast.aspx" target="_blank" rel="noopener noreferrer" class="link-btn">ACI website</a>
+            </nav>
+        </div>
+
+        <!-- الإطار السفلي -->
+        <div class="ornament-frame ornament-bottom">
+            <div class="frame-line-h"></div>
+            <div class="frame-line-v-left"></div>
+            <div class="frame-line-v-right"></div>
+            <div class="center-diamond"></div>
+            <div class="corner-box corner-top-left"></div>
+            <div class="corner-box corner-top-right"></div>
+            <div class="small-square sq-tl-1"></div>
+            <div class="small-square sq-tl-2"></div>
+            <div class="small-square sq-tl-3"></div>
+            <div class="small-square sq-tr-1"></div>
+            <div class="small-square sq-tr-2"></div>
+            <div class="small-square sq-tr-3"></div>
+        </div>
+    </main>
+
+</body>
+</html>
